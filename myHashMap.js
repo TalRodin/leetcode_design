@@ -11,10 +11,10 @@ class MyHashMap{
         }
         else{
             return  -1}
-    }
+     }
     remove(key){
         if(key in this.dict){
-             delete this.dict.key
+             delete this.dict[key]
         }
         else{
             return -1
@@ -23,6 +23,17 @@ class MyHashMap{
 }
 
 obj=new MyHashMap()
-obj.put('q',5)
+obj.put(1,1)
+obj.put(2,2)
+console.log(obj.get(1))
+console.log(obj.get(3))
+obj.put(2,1)
 console.log(obj.dict)
-console.log(obj.remove('q'))
+obj.remove(2)
+console.log(obj.dict)
+console.log(obj.get(2))
+
+// ["MyHashMap","put","put","get","get","put","get", "remove", "get"]
+// [[],[1,1],[2,2],[1],[3],[2,1],[2],[2],[2]]
+
+// [null,null,null,1,-1,null,1,null,-1]

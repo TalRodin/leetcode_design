@@ -1,37 +1,34 @@
-class QueueUsingStack{
+class MyQueue{
     constructor(){
         this.stack1=[]
-        this.stack2=[]
     }
     push(val){
         this.stack1.push(val)
     }
     pop(){
-        for (let i; i<this.stack1.length-1; i++){
-            v=this.stack1.pop()
-            this.stack2.push(v)
-        }
-        res=this.stack2.pop()
-        for (let i; i<this.stack2.length;i++){
-            v=this.stack2.pop()
-            this.stack1.push(v)
-        }
+        return this.stack1.shift()
     }
     peek(){
-        for (let i; i<this.stack1.length-1;i++){
-            v=this.stack1.pop()
-            this.stack2.push(v)
-        }
-        res=this.stack2[0]
-        for (let i; i<this.stack2.length;i++){
-            v=this.stack2.pop()
-            this.stack1.push(v)
-        }
+        let v=this.stack1.shift()
+        this.stack1.unshift(v)
+        return v
+    }
+    empty(){
+        return this.stack1.length===0
     }
 }
 
 obj=new QueueUsingStack()
-obj.push(4)
-obj.push(5)
-obj.push(3)
-print(obj.stack1)
+obj.push(1)
+obj.push(2)
+console.log(obj.peek())
+console.log(obj.pop())
+console.log(obj.stack1)
+
+
+
+// ["MyQueue","push","push","peek","pop","empty"]
+// [[],[1],[2],[],[],[]]
+
+
+// [null,null,null,1,1,false]

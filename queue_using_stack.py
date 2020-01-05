@@ -1,4 +1,4 @@
-class Queue_using_Stack():
+class MyQueue():
     def __init__(self):
         self.stack1=[]
         self.stack2=[]
@@ -22,6 +22,8 @@ class Queue_using_Stack():
             v=self.stack2.pop()
             self.stack1.append(v)
         return res
+    def empty(self):
+        return len(self.stack1)==0
 
 obj=Queue_using_Stack()
 print(obj.stack1)
