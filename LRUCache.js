@@ -3,7 +3,7 @@ class LRUCache{
         this.capacity=capacity
         this.cache={}
     }
-    set(key, value){
+    put(key, value){
         console.log(Object.keys(this.cache).length)
         if (key in this.cache){
             delete this.cache[key]
@@ -27,13 +27,8 @@ class LRUCache{
 }
 
 obj=new LRUCache(4)
-obj.set('c', 9)
-obj.set('a', 4)
-obj.set('b', 7)
-obj.set('e', 6)
-obj.set('e', 90)
-obj.set('f', 40)
-obj.set('r', 50)
+obj.put('c', 9)
+
 console.log(obj.cache)
 console.log(obj.get('f'))
 console.log(obj.cache)

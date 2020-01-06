@@ -1,4 +1,4 @@
-class minStack{
+class MinStack{
     constructor(){
         this.stack=[]
         this.min_v=[Infinity]
@@ -17,7 +17,6 @@ class minStack{
     getMin(){
         return this.min_v[this.min_v.length-1]
     }
-
 }
 
 obj=new minStack()
