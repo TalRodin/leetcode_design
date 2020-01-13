@@ -8,12 +8,10 @@ class LogSystem{
     }
     retrieve(s,e,gra){
         let i=this.granularity[gra]
-        console.log(i)
         let begin=s.slice(0,i)
         let end=e.slice(0,i)
         let arr=[]
         for (let j=0; j<this.logs.length;j++){
-            console.log(this.logs[j].slice(0,i))
             if (begin<=this.logs[j].slice(0,i) && end>=this.logs[j].slice(0,i)){
                 arr.push(j)
             }
@@ -21,6 +19,7 @@ class LogSystem{
         return arr.sort()
     }
 }
+
 
 obj=new LogSystem()
 console.log(obj.granularity)

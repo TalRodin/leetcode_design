@@ -12,6 +12,8 @@ class hitCounter{
         return this.data.length
     }
 }
+
+
 obj=new hitCounter()
 obj.hit(1)
 obj.hit(10)

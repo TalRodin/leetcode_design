@@ -21,13 +21,13 @@ class leaderBoard{
         }
         total=arr.reduce((a,b) => a + b, 0)
         return total
-
     }
     reset(playerID){
         this.hmap[playerID]=0
     }
-    
 }
+
+
 
 obj=new leaderBoard()
 obj.addScore(1,5)

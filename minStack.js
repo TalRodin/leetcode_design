@@ -19,7 +19,8 @@ class MinStack{
     }
 }
 
-obj=new minStack()
+
+obj=new MinStack()
 console.log(obj.stack)
 obj.push(34)
 obj.push(5)

@@ -11,6 +11,8 @@ class Logger{
        }
     }
 }
+
+
 obj=new Logger()
 console.log(obj.data)
 console.log(obj.shouldPrintMessage(1, "foo"))

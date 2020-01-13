@@ -17,8 +17,9 @@ class maxStack{
     getMax(){
         return this.max_v[this.max_v.length-1]
     }
-
 }
+
+
 
 obj=new maxStack()
 console.log(obj.stack)

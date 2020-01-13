@@ -10,7 +10,6 @@ class FileSystem{
         }
     }
     createPath(path, value){
-        console.log(path.slice(0,path.search("/")))
         if (!(path.slice(0,path.search("/")) in this.data) || (path in this.data)){
             return false
         }
@@ -18,6 +17,7 @@ class FileSystem{
         return true
     }
 }
+
 
 obj= new FileSystem()
 console.log(obj.data)

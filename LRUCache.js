@@ -4,7 +4,6 @@ class LRUCache{
         this.cache={}
     }
     put(key, value){
-        console.log(Object.keys(this.cache).length)
         if (key in this.cache){
             delete this.cache[key]
         }
@@ -25,6 +24,7 @@ class LRUCache{
         }
     }
 }
+
 
 obj=new LRUCache(4)
 obj.put('c', 9)
